@@ -85,7 +85,7 @@ if len(BOT_TOKEN) == 0:
 
 bot_id = BOT_TOKEN.split(':', 1)[0]
 
-DATABASE_URL = environ.get('DATABASE_URL', '')
+DATABASE_URL = environ.get('DATABASE_URL', 'mongodb+srv://cbautobot2:cbautobot2@cluster0.5zlhzxl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 if len(DATABASE_URL) == 0:
     DATABASE_URL = ''
 
@@ -126,21 +126,21 @@ if DATABASE_URL:
 else:
     config_dict = {}
 
-OWNER_ID = environ.get('OWNER_ID', '')
+OWNER_ID = environ.get('OWNER_ID', '7945551029')
 if len(OWNER_ID) == 0:
     log_error("OWNER_ID variable is missing! Exiting now")
     exit(1)
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get('TELEGRAM_API', '')
+TELEGRAM_API = environ.get('TELEGRAM_API', '29684235')
 if len(TELEGRAM_API) == 0:
     log_error("TELEGRAM_API variable is missing! Exiting now")
     exit(1)
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '')
+TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '51dae93051cbb70ffeeb95da11733eb4')
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
@@ -204,14 +204,14 @@ if len(EXTENSION_FILTER) > 0:
         x = x.lstrip('.')
         GLOBAL_EXTENSION_FILTER.append(x.strip().lower())
 
-LINKS_LOG_ID = environ.get('LINKS_LOG_ID', '')
+LINKS_LOG_ID = environ.get('LINKS_LOG_ID', '-1002695849332')
 LINKS_LOG_ID = '' if len(LINKS_LOG_ID) == 0 else int(LINKS_LOG_ID)
 
-MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
+MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '-1002695849332')
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ''
 
-LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '')
+LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002695849332')
 if len(LEECH_LOG_ID) == 0:
     LEECH_LOG_ID = ''
 
@@ -244,7 +244,7 @@ if len(MEGA_EMAIL) == 0 or len(MEGA_PASSWORD) == 0:
     MEGA_EMAIL = ''
     MEGA_PASSWORD = ''
 
-METADATA = environ.get('METADATA', '')
+METADATA = environ.get('METADATA', 'Uploaded By [MLTBRM]')
 
 GDTOT_CRYPT = environ.get('GDTOT_CRYPT', '')
 if len(GDTOT_CRYPT) == 0:
@@ -274,7 +274,7 @@ CAP_FONT = environ.get('CAP_FONT', '').lower()
 if CAP_FONT.strip() not in ['', 'b', 'i', 'u', 's', 'spoiler', 'code']:
     CAP_FONT = 'code'
 
-LEECH_FILENAME_PREFIX = environ.get('LEECH_FILENAME_PREFIX', '')
+LEECH_FILENAME_PREFIX = environ.get('LEECH_FILENAME_PREFIX', '@RM_Movie_Flix - ')
 if len(LEECH_FILENAME_PREFIX) == 0:
     LEECH_FILENAME_PREFIX = ''
 
@@ -314,7 +314,7 @@ if str(LEECH_SPLIT_SIZE) in ["4194304000", "2097152000"] or len(LEECH_SPLIT_SIZE
 else:
     LEECH_SPLIT_SIZE = int(LEECH_SPLIT_SIZE)
 
-BOT_MAX_TASKS = environ.get('BOT_MAX_TASKS', '')
+BOT_MAX_TASKS = environ.get('BOT_MAX_TASKS', '20')
 BOT_MAX_TASKS = int(BOT_MAX_TASKS) if BOT_MAX_TASKS.isdigit() else ''
 
 STATUS_UPDATE_INTERVAL = environ.get('STATUS_UPDATE_INTERVAL', '')
@@ -356,7 +356,7 @@ ENBALE_WATERMARK = environ.get('ENBALE_WATERMARK', '')
 ENBALE_WATERMARK = ENBALE_WATERMARK.lower() == 'true'
 
 FFMPEG_PRESET = environ.get('FFMPEG_PRESET', 'ultrafast')
-FFMPEG_CRF = environ.get('FFMPEG_CRF', '28')
+FFMPEG_CRF = environ.get('FFMPEG_CRF', '27')
 
 QUEUE_ALL = environ.get('QUEUE_ALL', '')
 QUEUE_ALL = '' if len(QUEUE_ALL) == 0 else int(QUEUE_ALL)
@@ -468,7 +468,7 @@ MEGA_LIMIT = '' if len(MEGA_LIMIT) == 0 else float(MEGA_LIMIT)
 LEECH_LIMIT = environ.get('LEECH_LIMIT', '')
 LEECH_LIMIT = '' if len(LEECH_LIMIT) == 0 else float(LEECH_LIMIT)
 
-USER_MAX_TASKS = environ.get('USER_MAX_TASKS', '')
+USER_MAX_TASKS = environ.get('USER_MAX_TASKS', '2')
 USER_MAX_TASKS = int(USER_MAX_TASKS) if USER_MAX_TASKS.isdigit() else ''
 
 USER_TIME_INTERVAL = environ.get('USER_TIME_INTERVAL', '')
@@ -520,15 +520,15 @@ IMG_PAGE = int(IMG_PAGE) if IMG_PAGE.isdigit() else ''
 
 AUTHOR_NAME = environ.get('AUTHOR_NAME', '')
 if len(AUTHOR_NAME) == 0:
-    AUTHOR_NAME = 'WZML-X'
+    AUTHOR_NAME = 'MLTBRM'
 
 AUTHOR_URL = environ.get('AUTHOR_URL', '')
 if len(AUTHOR_URL) == 0:
-    AUTHOR_URL = 'https://t.me/WZML_X'
+    AUTHOR_URL = 'https://t.me/MLTBRM'
 
 TITLE_NAME = environ.get('TITLE_NAME', '')
 if len(TITLE_NAME) == 0:
-    TITLE_NAME = 'WZ-M/L-X'
+    TITLE_NAME = 'MLTBRM'
 
 COVER_IMAGE = environ.get('COVER_IMAGE', '')
 if len(COVER_IMAGE) == 0:
@@ -536,7 +536,7 @@ if len(COVER_IMAGE) == 0:
 
 GD_INFO = environ.get('GD_INFO', '')
 if len(GD_INFO) == 0:
-    GD_INFO = 'Uploaded by WZML-X'
+    GD_INFO = 'Uploaded by MLTBRM'
 
 SAVE_MSG = environ.get('SAVE_MSG', '')
 SAVE_MSG = SAVE_MSG.lower() == 'true'
